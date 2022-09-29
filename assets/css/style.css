@@ -1,0 +1,268 @@
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 10fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "aside"
+    "main"
+    "footer"
+    ;
+}
+
+nav
+{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    background-color: coral;
+}
+aside{
+    grid-area: aside;
+    background-color: chocolate;
+}
+main{
+    grid-area: main;
+    background-color: peru;
+    
+    background-color: #16213E;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+footer{
+    grid-area: footer;
+    background-color: tomato;
+}
+
+.burger{
+    background-image: url('https://icons.iconarchive.com/icons/icons8/windows-8/256/Animals-Dog-Track-icon.png');
+    min-height: 3rem;
+    min-width: 4rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid black 2px;
+}
+.log{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    background-image: url('https://icons.iconarchive.com/icons/icons8/windows-8/256/Animals-Dog-icon.png');
+    min-height: 3rem;
+    min-width: 4rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5rem;
+}
+.navb{
+    display: none;
+}
+
+.card{
+    min-width:5rem;
+    max-width: 10rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink:5;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.img{
+    min-width: 5rem;
+    max-width: 15rem;
+    background-color: #790252;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-cuerpo{
+    display: flex;
+    flex-direction: column;
+}
+.valor{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 2rem 4rem;
+}
+
+.link{
+    outline: none;
+    text-decoration: none;
+    color: aliceblue;
+}
+.link:hover
+{
+    color: #790252;
+}
+
+
+
+
+@media screen and (min-width: 576px) {
+    .grid-container{
+        grid-template-rows: 1fr 9fr 2fr; 
+        grid-template-columns: 15% 85%;
+        grid-template-areas: 
+        "nav aside"
+        "nav main"
+        "footer main"
+        ;
+    }
+    nav
+    {
+        flex-direction: column;
+        justify-content: start;
+        background-color: coral;
+    }
+    main{
+        grid-area: main;
+        background-color: peru;
+        
+        background-color: #16213E;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+ 
+.burger{
+        display: none;
+    }
+    .log{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-top: 2rem;
+        margin-left: 5px;
+        border-bottom: 2px solid saddlebrown;
+    }
+    .logo{
+        background-image: url('https://icons.iconarchive.com/icons/icons8/windows-8/256/Animals-Dog-icon.png');
+        min-height: 80px;
+        min-width: 80px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 5rem;
+    }
+
+    .navb{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        
+    }
+    a{
+        outline: none;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 2rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+html{
+    padding: 0;
+    margin: 0;
+}
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 10fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "aside"
+    "footer"
+    ;
+}
+
+nav{
+    grid-area: nav;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between ;
+}
+main{
+    grid-area: main;
+    background-color: peru;
+}
+
+aside{
+    grid-area: aside;
+    background-color: blueviolet;
+}
+footer{
+    grid-area: footer;
+    background-color: tomato;
+}
+
+.logo{
+    background-color: blue; 
+    border: solid black 5px;
+}
+.nav{
+    display: none;
+}
+
+.img-s{
+    background-image: url('https://icons.iconarchive.com/icons/icons8/windows-8/256/Animals-Dog-Track-icon.png');
+    min-height: 3rem;
+    min-width: 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*
+@media screen and (min-width: 576px ){
+    
+    .grid-container{
+        grid-template-columns: 15% 85%;
+        grid-template-areas: 
+        "nav aside"
+        "nav main"
+        "footer main"
+        ;
+    }
+
+    .nav{
+        background-color: bisque; 
+        border: solid black 5px;
+    }
+    .nav-t{
+        outline: none;
+        text-decoration: none;
+        color: black;
+    }
+    
+}
